@@ -56,3 +56,35 @@ next-env.d.ts
 # Misc
 *.pem
 local-*
+
+# Local scratch / working notes
+upload/
+agent-ctx/
+worklog.md
+scratch/
+notes.local.md
+
+# Mobile build artifacts (distribute via Releases or EAS, not git)
+*.apk
+*.aab
+*.ipa
+*.app
+*.dSYM.zip
+
+# Expo
+.expo/
+.expo-shared/
+mobile/android/
+mobile/ios/
+
+# Signing material - never commit
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.cer
+*.certSigningRequest
+google-services.json
+GoogleService-Info.plist

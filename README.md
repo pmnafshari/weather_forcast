@@ -6,12 +6,14 @@ A responsive weather dashboard built with Next.js and TypeScript using the OpenW
 
 Desktop
 
-![Desktop preview](docs/preview-desktop.png)
+![Desktop preview](docs/desktop1.png)
+![Desktop preview](docs/desktop2.png)
+![Desktop preview](docs/desktop3.png)
 
 Mobile
 
-![Mobile preview](docs/preview-mobile.png)
-
+![Mobile preview](docs/mobile2.png)
+![Mobile preview](docs/mobile1.png)
 ## Features
 
 ### Current Weather

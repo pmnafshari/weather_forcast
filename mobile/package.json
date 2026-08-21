@@ -1,0 +1,54 @@
+{
+  "name": "weather-intelligence",
+  "version": "1.0.0",
+  "description": "Intelligent weather insights, outdoor activity recommendations, air quality, UV intelligence, and detailed forecasts.",
+  "main": "expo-router/entry",
+  "scripts": {
+    "dev": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "test": "for f in tests/unitConversion.test.ts tests/weatherFormatters.test.ts tests/activityScore.test.ts tests/WeatherBackground.test.tsx tests/storage.test.ts tests/weatherApi.test.ts tests/components/componentLogic.test.ts; do echo \"Running $f\"; npx tsx \"$f\" || exit 1; done && npx jest --no-cache tests/components/SearchModal.test.tsx"
+  },
+  "keywords": [
+    "weather",
+    "forecast",
+    "react-native",
+    "expo",
+    "mobile"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@expo/vector-icons": "^15.1.1",
+    "@react-native-async-storage/async-storage": "^3.1.1",
+    "@react-native-community/netinfo": "^12.0.1",
+    "@tanstack/react-query": "^5.101.4",
+    "date-fns": "^4.4.0",
+    "expo": "~57.0.15",
+    "expo-constants": "^57.0.13",
+    "expo-dev-client": "~57.0.14",
+    "expo-linking": "^57.0.7",
+    "expo-location": "^57.0.12",
+    "expo-router": "^57.0.15",
+    "expo-status-bar": "^57.0.1",
+    "expo-system-ui": "~57.0.2",
+    "react": "19.2.3",
+    "react-dom": "^19.2.3",
+    "react-native": "^0.86.2",
+    "react-native-gesture-handler": "^3.2.1",
+    "react-native-reanimated": "^4.5.3",
+    "react-native-safe-area-context": "^5.9.1",
+    "react-native-screens": "^4.27.0",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@testing-library/react-native": "^14.0.1",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.2.18",
+    "jest-expo": "^57.0.4",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  }
+}

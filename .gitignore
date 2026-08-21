@@ -57,12 +57,15 @@ next-env.d.ts
 *.pem
 local-*
 
+# Root project uses bun - keep npm's lockfile out (mobile/ has its own)
+/package-lock.json
+
 # Local scratch / working notes
 upload/
-agent-ctx/
-worklog.md
 scratch/
 notes.local.md
+worklog.md
+agent-ctx/
 
 # Mobile build artifacts (distribute via Releases or EAS, not git)
 *.apk

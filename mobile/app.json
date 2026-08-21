@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "Weather Intelligence",
+    "slug": "weather-intelligence",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#07111F"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.weatherintelligence.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Weather Intelligence uses your location to show local weather data and forecasts."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#07111F"
+      },
+      "package": "com.weatherintelligence.app",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "scheme": "weatherintelligence",
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "root": "app"
+        }
+      ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false,
+        "root": "app"
+      },
+      "eas": {
+        "projectId": "b0ba27a5-b9e5-4dee-a9a0-cbd4ae857e17"
+      }
+    }
+  }
+}

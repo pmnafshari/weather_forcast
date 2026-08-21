@@ -1,6 +1,7 @@
 # Weather Forecast
 
-A responsive weather dashboard built with Next.js and TypeScript using the OpenWeather API.
+A weather dashboard built with Next.js and TypeScript, plus a React Native companion
+app built with Expo. Both use the OpenWeather API and share their business logic.
 
 ## Preview
 
@@ -54,6 +55,21 @@ Mobile
 - Skeleton loading states
 - Error and rate-limit handling
 - Mock data fallback when API is unavailable
+
+## Mobile App
+
+A React Native app lives in [`mobile/`](mobile/) and covers the same ground as the
+dashboard: current conditions, hourly and 7-day forecast, activity scoring, air
+quality, and UV guidance. On top of that it adds:
+
+- Native tab navigation across Home, Forecast, Activities, Air Quality, and Settings
+- Offline cache with a 10-minute TTL, backed by AsyncStorage
+- Pull-to-refresh and refetch on tab focus
+- Device geolocation for local weather
+- Reanimated weather backgrounds
+- Persisted unit preferences
+
+Setup and build instructions are in [mobile/README.md](mobile/README.md).
 
 ## Tech Stack
 
@@ -120,6 +136,12 @@ src/
 public/
   logo.svg
   robots.txt
+mobile/                     # React Native app (see mobile/README.md)
+  app/                      # Expo Router screens
+  components/               # UI components
+  services/                 # API client and storage
+  store/                    # Zustand store
+  utils/                    # Shared formatting and scoring logic
 ```
 
 ## Installation
@@ -127,8 +149,8 @@ public/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/weather-forecast.git
-cd weather-forecast
+git clone https://github.com/pmnafshari/weather_forcast.git
+cd weather_forcast
 ```
 
 2. Install dependencies:
@@ -177,7 +199,10 @@ All data comes from the [OpenWeather API](https://openweathermap.org/api). A fre
 | `/data/2.5/air_pollution` | Current air quality index and pollutant concentrations |
 | `/geo/1.0/direct` | City name geocoding for search |
 
-API calls are proxied through Next.js API routes (`/api/weather`, `/api/air-quality`, `/api/geocode`) to keep the key server-side.
+On the web the calls are proxied through Next.js API routes (`/api/weather`,
+`/api/air-quality`, `/api/geocode`) so the key stays server-side. The mobile app
+calls OpenWeather directly, which means its key ships inside the bundle — see
+[mobile/README.md](mobile/README.md#a-note-on-the-api-key).
 
 ## Responsive Design
 
